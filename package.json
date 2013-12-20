@@ -1,0 +1,27 @@
+{
+  "name": "objection",
+  "version": "0.0.1",
+  "description": "object utility functions for node.js and modern browsers",
+  "main": "lib/",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test -R spec -t 4000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhigginbotham/objection"
+  },
+  "keywords": [
+    "utilities"
+  ],
+  "author": "micro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhigginbotham/objection/issues"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0"
+  }
+}
