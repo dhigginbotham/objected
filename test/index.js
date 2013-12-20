@@ -15,7 +15,7 @@ describe('strictExtend tests', function () {
       first: /[A-z0-9 ]/gi,
       second: [1,2,3],
       third: {
-        one: 'one-three',
+        one: 'levels',
         two: {
           three: 'levels',
           four: 'levels',
@@ -24,12 +24,13 @@ describe('strictExtend tests', function () {
           }
         }
       },
-      fourth: 'four'
+      fourth: 'i wont be extended because this is strict extending'
     };
 
     obj.strictExtend(defaults, extended);
 
     expect(defaults.fourth).to.be(undefined);
+    expect(defaults.third.two.five()).to.eql('levels');
 
     Object.keys(defaults).forEach(function (item) {
 
