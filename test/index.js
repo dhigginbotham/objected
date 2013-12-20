@@ -58,6 +58,7 @@ describe('strictExtend tests', function () {
     var index = obj.collectionIndex(col, 'id', 1);
 
     expect(index).to.eql(0);
+    expect(col[index].id).to.eql(1);
 
     return done();
 
