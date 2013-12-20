@@ -3,7 +3,7 @@ var obj = require('../lib'),
 
 describe('strictExtend tests', function () {
 
-  it('it should be able to extend an object', function (done) {
+  it('should be able to extend an object', function (done) {
 
     var defaults = {
       first: '1',
@@ -15,12 +15,21 @@ describe('strictExtend tests', function () {
       first: /[A-z0-9 ]/gi,
       second: [1,2,3],
       third: {
-        item: 'one-three'
+        one: 'one-three',
+        two: {
+          three: 'levels',
+          four: 'levels',
+          five: function () {
+            return 'levels';
+          }
+        }
       },
       fourth: 'four'
     };
 
     obj.strictExtend(defaults, extended);
+
+    expect(defaults.fourth).to.be(undefined);
 
     Object.keys(defaults).forEach(function (item) {
 
