@@ -42,4 +42,26 @@ describe('strictExtend tests', function () {
 
   });
 
+  it('should be able to get the index of a collection', function (done) {
+
+    var col = [
+      {
+        id: 1,
+        name: 'first'
+      },
+      {
+        id: 2,
+        name: 'second'
+      }
+    ];
+
+    var index = obj.collectionIndex(col, 'id', 1);
+
+    expect(index).to.eql(0);
+
+    return done();
+
+
+  });
+
 });
