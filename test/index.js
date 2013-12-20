@@ -12,9 +12,11 @@ describe('strictExtend tests', function () {
     };
 
     var extended = {
-      first: 'one',
-      second: 'two',
-      third: 'three',
+      first: /[A-z0-9 ]/gi,
+      second: [1,2,3],
+      third: {
+        item: 'one-three'
+      },
       fourth: 'four'
     };
 
